@@ -1,0 +1,248 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    background-image: url(./back2.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Glass effect container */
+.resume-container {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    flex-direction: column; /* Start with stacked view */
+}
+
+/* Right Section Styling (Profile) */
+.right-section {
+    background: rgba(50, 39, 94, 0.5);
+    background-image: url(./background2.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align:left;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+}
+
+/* Profile Picture */
+.profile-picture {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #e63946;
+    margin-bottom: 20px;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+h1 {
+    font-size: 2em;
+    color: #eceaf4;
+    background-color: #c7596b;
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #edecf3;
+    background-color: #d5808e;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    text-decoration:underline;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #540867;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+/* Lists */
+ul, ul2 {
+    font-size: 1em;
+    color: #691376;
+    padding: 0;
+    list-style: none;
+}
+
+ul2 li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+ul2 li::before {
+    content: "•";
+    color: #d51062;
+    font-size: 1.4em;
+    position: absolute;
+    left: 0;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1em;
+    color: #edecf3;
+    background-color: #c86ba6;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Contact Info */
+.contact-info {
+    font-size: 0.9em;
+    margin: 20px 0;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+}
+
+/* Reference */
+.reference {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9em;
+}
+
+/* Left Section Styling */
+.left-section {
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(255, 182, 193, 0.4), rgba(255, 105, 180, 0.4));
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+}
+
+.about, .skills, .experience, .education {
+    margin-bottom: 30px;
+}
+
+/* Skills Section */
+
+/* Skills Section Styling */
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-item {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.skill-item span {
+    font-size: 1em;
+    font-weight: bold;
+    color: #32275e;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 8px;
+    width: 100%;
+    position: relative;
+}
+
+.progress {
+    background: linear-gradient(90deg, #d51062, #78067a);
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
+
+
+.skills ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    height: 5px;
+    background-color: #e63946;
+    border-radius: 5px;
+    width: 70%;
+}
+
+/* Button */
+button {
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgba(122, 8, 135, 0.8);
+    border: none;
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #d51062;
+    box-shadow: 0 6px 20px rgba(124, 19, 96, 0.5);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .resume-container {
+        flex-direction: row;
+    }
+    .right-section, .left-section {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .resume-container {
+        flex-direction: row;
+        max-width: 1000px;
+    }
+    .right-section {
+        width: 70%;
+        padding: 40px;
+    }
+    .left-section {
+        width: 30%;
+        padding: 30px;
+    }
+}
